@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class AnimatorController : MonoBehaviour
+public class BasicAnimationController : MonoBehaviour
 {
     protected Animator animator;
     protected EventHub eventhub;
