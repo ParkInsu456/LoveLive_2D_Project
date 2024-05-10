@@ -24,7 +24,7 @@ public class PlayerInputController : EventHub
     {
         Vector2 mouseInputValue = value.Get<Vector2>();
         Vector2 mouseWorldPos = _camera.ScreenToWorldPoint(mouseInputValue);
-        Vector2 mouseDirection = (mouseWorldPos - (Vector2)transform.position).normalized;
+        Vector2 mouseDirection = (mouseWorldPos - (Vector2)transform.position).normalized; // OnLook하는 객체의 위치와 마우스의월드좌표를 통해 객체->마우스방향벡터를 구한다.
 
         CallLookEvent(mouseDirection);
     }
