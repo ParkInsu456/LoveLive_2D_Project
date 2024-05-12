@@ -8,8 +8,8 @@ public class EventHub : MonoBehaviour
     // Event를 핸들링 할 클래스
 
     public event Action<Vector2> OnDirectionEvent;
-
     public event Action<Vector2> OnLookEvent;
+    //public event Action OnTextEvent;
 
 
 
@@ -22,4 +22,6 @@ public class EventHub : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
+
+
 }
