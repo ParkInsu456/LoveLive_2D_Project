@@ -1,5 +1,5 @@
 {
-    "name": "Player",
+    "name": "PlayerController2D",
     "maps": [
         {
             "name": "Player",
@@ -90,6 +90,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "cc4265e3-b58c-4f74-b600-c5f8543c6862",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

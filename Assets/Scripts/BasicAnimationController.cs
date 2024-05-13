@@ -7,7 +7,7 @@ public class BasicAnimationController : MonoBehaviour
     protected EventHub eventhub;
     protected virtual void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         eventhub = GetComponent<EventHub>();
     }
 

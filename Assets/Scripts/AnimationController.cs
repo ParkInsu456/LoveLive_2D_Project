@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AnimationController : BasicAnimationController
 {
-    private static readonly int isWalk = Animator.StringToHash("isWalk");
+    private static readonly int IsWalk = Animator.StringToHash("IsWalk");
 
     private readonly float magnituteThreshold = 0.5f;
     protected override void Awake()
@@ -18,6 +18,7 @@ public class AnimationController : BasicAnimationController
 
     private void Move(Vector2 vector)
     {
-        animator.SetBool(isWalk, vector.magnitude > magnituteThreshold);
+        
+        animator.SetBool(IsWalk, vector.magnitude > magnituteThreshold);
     }
 }

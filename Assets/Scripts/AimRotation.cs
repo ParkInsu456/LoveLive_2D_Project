@@ -8,7 +8,7 @@ public class AimRotation : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Transform armPivot;
 
-    [SerializeField] private SpriteRenderer characterRenderer;
+    [SerializeField] private SpriteRenderer MainSprite;
     private EventHub hub;
 
     private void Awake()
@@ -32,7 +32,7 @@ public class AimRotation : MonoBehaviour
     {
         // 플레이어 - 마우스 의 각도를 얻는다.
         float degreeObjToMouse = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        characterRenderer.flipX = (Mathf.Abs(degreeObjToMouse) > 90f);
+        MainSprite.flipX = (Mathf.Abs(degreeObjToMouse) > 90f);
 
         armPivot.rotation = Quaternion.Euler(0, 0, degreeObjToMouse);
 
