@@ -19,8 +19,6 @@ public class GroundBar : MonoBehaviour
     {
         selectCharacterMenu.SetActive(true);
         SCMscript.CallBoolEvent();
-
-
     }
 
     public void ButtonUsersMenu()

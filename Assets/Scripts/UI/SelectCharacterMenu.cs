@@ -15,7 +15,7 @@ public class SelectCharacterMenu : MonoBehaviour
     private InGameChangeCharacter inGameChangeCharacter;
 
     private event Action OnBoolEvent;
-    public bool IsInGame = false;
+    
     [SerializeField] private GameObject button1;
     [SerializeField] private GameObject button2;
     [SerializeField] private GameObject buttonInGame1;
@@ -27,7 +27,7 @@ public class SelectCharacterMenu : MonoBehaviour
     {
         inGameChangeCharacter = GetComponent<InGameChangeCharacter>();
     }
-    private void Start()
+    private void OnEnable()
     {
         OnBoolEvent += ButtonSwap;
     }
