@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5803478939643119801}
   - component: {fileID: 2501089701506609100}
   - component: {fileID: 680315653117706412}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: PlayerNameText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PlayerName
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5180252076452642281}
   - component: {fileID: 1371484193704142658}
   - component: {fileID: 5542087747508518960}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 7690737855879344504}
   - component: {fileID: 7640893291651520368}
   - component: {fileID: 1324295239651207428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7419588390355739483}
   - component: {fileID: 5559554026443215426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7799597174138338309}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DirectionArrowAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 1883553094632565113}
   - component: {fileID: 6593883600116279870}
   - component: {fileID: 5538403994698024789}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

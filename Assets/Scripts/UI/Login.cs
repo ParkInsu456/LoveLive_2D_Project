@@ -20,6 +20,7 @@ public class Login : MonoBehaviour
     [SerializeField] public GameObject SelectedCharacter;
     [SerializeField] private Image sourceImage; // 여기에 드래그앤드롭해야함.
 
+    [SerializeField] private GameObject PlayUI;
 
 
     private void Awake()
@@ -59,6 +60,7 @@ public class Login : MonoBehaviour
         // 캐릭터를 생성한다
         GameManager.Instance.InstantiatePlayer(SelectedCharacter);
         Time.timeScale = 1f;
+        PlayUI.SetActive(true);
     }
 
 

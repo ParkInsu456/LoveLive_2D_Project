@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI TxtplayerName;
+    [SerializeField] public TextMeshProUGUI TxtplayerName;
     public static string Name;
 
  

@@ -27,7 +27,11 @@ public class GameManager : MonoBehaviour
 
     public void InstantiatePlayer(GameObject player)
     {
-        Instantiate(player);
+        Player = Instantiate(player);
+    }
+    public void InstantiatePlayer(GameObject player, Vector3 pos)
+    {
+        Player = Instantiate(player,pos, Quaternion.identity);
     }
 
 }
