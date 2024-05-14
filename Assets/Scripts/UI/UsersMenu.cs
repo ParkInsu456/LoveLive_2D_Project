@@ -69,14 +69,14 @@ public class UsersMenu : MonoBehaviour
     private void GetUsersName()
     {
         // 해당 레이어의 모든 게임 객체를 찾음
-        GameObject[] objs = GameObject.FindObjectsOfType<GameObject>();
+        GameObject[] objs = GameObject.FindObjectsOfType<GameObject>(); // 탐색폭을 공통적인 컴포넌트로 좁힐 수 있다. PlayerInfo
         foreach (GameObject obj in objs)
         {
             if (obj.layer == LayerMask.NameToLayer(layerName) || obj.layer == LayerMask.NameToLayer(layerName2) && obj.transform.parent == null) 
             {
                 PlayerInfo info = obj.GetComponent<PlayerInfo>();
                 // 해당 레이어에 속한 객체의 이름을 리스트에 추가  
-                userNames.Add(info.Name);    // TODO :: 이름 바꿔넣기
+                userNames.Add(info.Name);    
             }
         }
     }
@@ -97,6 +97,7 @@ public class UsersMenu : MonoBehaviour
 
     // 
     // 프리팹화 하고 오브젝트풀로 하기
+
     // 씬데이터를 만들고 리스트 데이터
     // 텍스트를 가지고있는 프리팹
 
