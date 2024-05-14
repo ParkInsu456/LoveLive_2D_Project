@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class GroundBar : MonoBehaviour
 {
+    [SerializeField] private GameObject login;
+    [SerializeField] private GameObject inputNameInGame;
     [SerializeField] private GameObject selectCharacterMenu;
-    [SerializeField] private GameObject UsersPanel;
+    [SerializeField] private GameObject usersPanel;
+
     //[SerializeField] private GameObject PlayUI;
     private SelectCharacterMenu SCMscript;
 
@@ -14,6 +17,14 @@ public class GroundBar : MonoBehaviour
     {
         SCMscript = selectCharacterMenu.GetComponent<SelectCharacterMenu>();
     }
+
+
+    public void ButtonInputNameInGame()
+    {        
+        inputNameInGame.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
 
     public void ButtonSelectCharacterMenu()
     {
@@ -23,7 +34,7 @@ public class GroundBar : MonoBehaviour
 
     public void ButtonUsersMenu()
     {
-        UsersPanel.SetActive(true);
+        usersPanel.SetActive(true);
     }
 
 }

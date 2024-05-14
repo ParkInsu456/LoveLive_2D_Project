@@ -37,8 +37,7 @@ public class InGameChangeCharacter : MonoBehaviour
     }
     void GetPrefab()
     {
-        nextPlayer = SelectCharacterMenu.GetComponent<SelectCharacterMenu>().SelectedPrefab; // 프리팹을 가져옴
-        
+        nextPlayer = SelectCharacterMenu.GetComponent<SelectCharacterMenu>().SelectedPrefab; // 프리팹을 가져옴 // 이름 다시짓기가 필요하다. 플레이어와 프리팹 병용으로 혼란이 옴        
     }
 
     void Change()
@@ -51,30 +50,8 @@ public class InGameChangeCharacter : MonoBehaviour
         //GameManager.Instance.Player = nextPlayer;
         nextPlayer = null;
     }
-
     // 캐릭터 선택창은 재활용 가능하다.
-
-    
-
-    
-
-
-
 }
-
-// 참석인원 UI
-// 요구사항
-// 화면 오른쪽에 현재 맵에 있는 사람의 목록을 보여줍니다.
-
-
-// Users 레이어의 이름을 출력하는 기능
-// 씬에서 레이어 객체를 체크, 그 이름을 출력
-// 이걸 위한 컴포넌트?? 텍스트를 아래에 순서대로 만들어지게 하는법. 카드뒤집기 카드 만들듯이 생성위치 수식화
-
-// 체크한 객체의 이름을 추출
-// 배열에 넣음
-// Text를 배열 길이만큼 동적생성
-// Text가 배열[i]를 출력
 
 
 

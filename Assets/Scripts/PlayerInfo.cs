@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class PlayerInfo : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI TxtplayerName;
-    public static string Name;
+    [SerializeField, HideInInspector] public string Name;
 
  
     public void NameUpdate()
     {
-        TxtplayerName.text = Name;
+        
+            TxtplayerName.text = Name;
+        
     }
 }
