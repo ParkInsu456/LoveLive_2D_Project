@@ -35,6 +35,7 @@ public class GroundBar : MonoBehaviour
     public void ButtonUsersMenu()
     {
         usersPanel.SetActive(true);
+        
     }
 
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,27 +28,44 @@ public class UsersMenu : MonoBehaviour
     public GameObject textBox;
     public GameObject List;
 
-    private List<string> userNames = new List<string>();
+    private List<string> userNames;
     // 찾는 레이어 이름
     public string layerName = "Users";
     public string layerName2 = "Player";
+
+    public static event Action OnUsersMenuEvent;
+
+    
+
+    public static void CallUsersMenuEvent()
+    {
+        OnUsersMenuEvent?.Invoke();
+    }
+    private void OnEnable()
+    {
+        OnUsersMenuEvent += GetUsersName;
+        OnUsersMenuEvent += MakeUserNameList;        
+    }
+
     private void Start()
+    {
+        userNames = new List<string>();
+        CallUsersMenuEvent();
+    }
+    private void GetUsersName()
     {
         // 해당 레이어의 모든 게임 객체를 찾음
         GameObject[] objs = GameObject.FindObjectsOfType<GameObject>();
         foreach (GameObject obj in objs)
         {
-            if( obj.layer == LayerMask.NameToLayer(layerName) || obj.layer == LayerMask.NameToLayer(layerName2)) // && obj.transform.parent == null
+            if (obj.layer == LayerMask.NameToLayer(layerName) || obj.layer == LayerMask.NameToLayer(layerName2) && obj.transform.parent == null) 
             {
-                // 해당 레이어에 속한 객체의 이름을 리스트에 추가   // 현재 오브젝트의 이름을 가져오고있는데 특정속성을 가져오면 됨.
-                userNames.Add(obj.GetComponent<PlayerInfo>().Name);
+                PlayerInfo info = obj.GetComponent<PlayerInfo>();
+                // 해당 레이어에 속한 객체의 이름을 리스트에 추가  
+                userNames.Add(info.Name);    // TODO :: 이름 바꿔넣기
             }
         }
-
-        MakeUserNameList();
     }
-
-
 
     private void MakeUserNameList()
     {

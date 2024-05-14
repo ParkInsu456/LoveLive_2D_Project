@@ -133,7 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 95618228}
   - component: {fileID: 95618227}
-  m_Layer: 0
+  - component: {fileID: 95618229}
+  m_Layer: 6
   m_Name: Character_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +208,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95618229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95618226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2a25f2d94e50b49ba762c6aad0218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TMP_PlayerName: {fileID: 0}
+  Name: Umi
 --- !u!1 &147149435
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +782,8 @@ GameObject:
   m_Component:
   - component: {fileID: 333190210}
   - component: {fileID: 333190209}
-  m_Layer: 0
+  - component: {fileID: 333190211}
+  m_Layer: 6
   m_Name: Character_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,6 +857,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333190211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333190208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2a25f2d94e50b49ba762c6aad0218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TMP_PlayerName: {fileID: 0}
+  Name: Eri
 --- !u!1 &365347339
 GameObject:
   m_ObjectHideFlags: 0
@@ -63624,7 +63654,7 @@ MonoBehaviour:
   SelectCharacterMenu: {fileID: 1840476492}
   prevPlayer: {fileID: 0}
   nextPlayer: {fileID: 0}
-  tempName: 
+  strTempName: 
 --- !u!114 &1277090076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72126,7 +72156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b453dff96f83241a28aeaa5fbed4b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameTxtInGame: {fileID: 1016749357}
+  inputFieldInGame: {fileID: 1016749357}
   playerInfo: {fileID: 1883553094632565113, guid: b8ea2d0103ab41647ad0f9ca7d062c70, type: 3}
   enterButton: {fileID: 1791597324}
   enterButtonImage: {fileID: 1791597325}
@@ -83583,7 +83613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2a25f2d94e50b49ba762c6aad0218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TxtplayerName: {fileID: 0}
+  TMP_PlayerName: {fileID: 0}
   Name: Nozomi
 --- !u!1 &1840476492
 GameObject:
@@ -83659,7 +83689,7 @@ MonoBehaviour:
   SelectCharacterMenu: {fileID: 1840476492}
   prevPlayer: {fileID: 0}
   nextPlayer: {fileID: 0}
-  tempName: 
+  strTempName: 
 --- !u!1 &1854138175
 GameObject:
   m_ObjectHideFlags: 0
@@ -84100,7 +84130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2a25f2d94e50b49ba762c6aad0218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TxtplayerName: {fileID: 0}
+  TMP_PlayerName: {fileID: 0}
   Name: Kotori
 --- !u!1 &1962900414
 GameObject:
