@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI TxtplayerName;
-    [SerializeField, HideInInspector] public string Name;
+    [SerializeField] private TextMeshProUGUI TMP_PlayerName;
+    [SerializeField] public string Name;
 
- 
+    //private void Awake()
+    //{
+    //    TMP_PlayerName = GetComponentInChildren<TextMeshProUGUI>();
+    //}
+
     public void NameUpdate()
     {
-        
-            TxtplayerName.text = Name;
-        
+        GameManager.Instance.Player.GetComponent<PlayerInfo>().TMP_PlayerName.text = Name;
     }
 }

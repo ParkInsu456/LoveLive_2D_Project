@@ -9,7 +9,7 @@ public class InGameChangeCharacter : MonoBehaviour
     
     [SerializeField] public GameObject prevPlayer;
     [SerializeField] public GameObject nextPlayer;
-    [SerializeField] private string tempName;
+    [SerializeField] private string strTempName;
     private Vector3 tempPos;
 
     private void Awake()
@@ -29,7 +29,8 @@ public class InGameChangeCharacter : MonoBehaviour
 
     void GetPrevPlayerInfo()
     {
-        tempName = prevPlayer.GetComponent<PlayerInfo>().TxtplayerName.text;
+        prevPlayer = GameManager.Instance.Player;
+        strTempName = prevPlayer.GetComponent<PlayerInfo>().Name;
         tempPos = prevPlayer.transform.position;
         
         Destroy(prevPlayer);
@@ -43,9 +44,10 @@ public class InGameChangeCharacter : MonoBehaviour
     {
         
         GameManager.Instance.InstantiatePlayer(nextPlayer, tempPos);
-        GameManager.Instance.Player.GetComponent<PlayerInfo>().TxtplayerName.text = tempName; 
-       // 프리팹에도 기록이 남을 수 있다...
-       
+        GameManager.Instance.Player.GetComponent<PlayerInfo>().Name = strTempName;
+        GameManager.Instance.Player.GetComponent<PlayerInfo>().NameUpdate();
+        // 프리팹에도 기록이 남을 수 있다...
+
         //GameManager.Instance.Player = nextPlayer;
         nextPlayer = null;
     }

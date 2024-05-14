@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
 
 
 
-    public void InstantiatePlayer(GameObject player)
+    public void InstantiatePlayer(GameObject selectedPrefab)
     {
-        Player = Instantiate(player);
+        Player = Instantiate(selectedPrefab);
     }
-    public void InstantiatePlayer(GameObject player, Vector3 pos)
+    public void InstantiatePlayer(GameObject selectedPrefab, Vector3 pos)
     {
-        Player = Instantiate(player,pos, Quaternion.identity);
+        Player = Instantiate(selectedPrefab, pos, Quaternion.identity);
     }
 
 }

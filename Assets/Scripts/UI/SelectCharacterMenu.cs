@@ -69,7 +69,7 @@ public class SelectCharacterMenu : MonoBehaviour
     void ButtonSwap()
     {
         
-        inGameChangeCharacter.prevPlayer = GameManager.Instance.Player;
+        
         button1.SetActive(false);
         button2.SetActive(false);
         buttonInGame1.SetActive(true);

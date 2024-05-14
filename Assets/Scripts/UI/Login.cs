@@ -12,8 +12,8 @@ public class Login : MonoBehaviour
     private GameObject loginPanel;
        
     [SerializeField] private PlayerInfo playerInfo; // 인스펙터에서 캐싱
-    [SerializeField] private TMP_InputField nameTxt;  // 여기에 InputField에서 입력한 txt를 인스펙터에 캐싱하기
-    
+    [SerializeField] private TMP_InputField inputField;  
+
     [SerializeField] private Button enterButton;
     [SerializeField] private Image enterButtonImage;
 
@@ -49,7 +49,7 @@ public class Login : MonoBehaviour
 
     private void InputName()
     {
-        GameManager.Instance.Player.GetComponent<PlayerInfo>().Name = nameTxt.text; 
+        playerInfo.Name = inputField.text; 
         //playerInfo.Name = nameTxt.text;
         playerInfo.NameUpdate();
     }
@@ -57,11 +57,11 @@ public class Login : MonoBehaviour
 
 
     public void ClickEnterButton()
-    {
-       
+    {       
         loginPanel.SetActive(false);
         // 캐릭터를 생성한다
         GameManager.Instance.InstantiatePlayer(SelectedCharacter);
+        playerInfo = GameManager.Instance.Player.GetComponent<PlayerInfo>();
         InputName();
         Time.timeScale = 1f;
         PlayUI.SetActive(true);
@@ -73,7 +73,7 @@ public class Login : MonoBehaviour
     // 입력한 이름이 2~10글자 사이가 아니라면 버튼을 비활성화시키고 색을 어둡게하는 기능
     void LimitedNameLength()
     {
-        string curInput = nameTxt.text;       
+        string curInput = inputField.text;       
         if(curInput.Length < 2 || curInput.Length > 10)
         {
             //버튼 비활성화

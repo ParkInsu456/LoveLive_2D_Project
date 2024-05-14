@@ -4,22 +4,27 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NameChangeInGame : MonoBehaviour
+public class NameChangeInGame : MonoBehaviour   // PlayUI - inputNameInGame¿¡ Ä³½ÌµÊ
 {
-    [SerializeField] private TMP_InputField nameTxtInGame;
+    [SerializeField] private TMP_InputField inputFieldInGame;
     [SerializeField] private PlayerInfo playerInfo;
 
     [SerializeField] private Button enterButton;
     [SerializeField] private Image enterButtonImage;
 
+    private void Awake()
+    {
+        playerInfo = GameManager.Instance.Player.GetComponent<PlayerInfo>();
+    }
+
     private void Update()
     {
-        LimitedNameLength(nameTxtInGame);
+        LimitedNameLength(inputFieldInGame);
     }
 
     private void InputNameInGame()
     {
-        playerInfo.Name = nameTxtInGame.text;
+        playerInfo.Name = inputFieldInGame.text;
         playerInfo.NameUpdate();
     }
 
