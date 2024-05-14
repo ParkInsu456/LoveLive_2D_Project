@@ -28,7 +28,7 @@ public class UsersMenu : MonoBehaviour
     public GameObject textBox;
     public GameObject List;
 
-    private List<string> userNames;
+    public List<string> userNames;
     // 찾는 레이어 이름
     public string layerName = "Users";
     public string layerName2 = "Player";
@@ -43,14 +43,28 @@ public class UsersMenu : MonoBehaviour
     }
     private void OnEnable()
     {
-        OnUsersMenuEvent += GetUsersName;
-        OnUsersMenuEvent += MakeUserNameList;        
+        //OnUsersMenuEvent += GetUsersName;
+        //OnUsersMenuEvent += MakeUserNameList;
+    }
+
+    private void OnDisable()
+    {
+        OnUsersMenuEvent -= GetUsersName;
+        OnUsersMenuEvent -= MakeUserNameList;
     }
 
     private void Start()
     {
+        OnUsersMenuEvent += GetUsersName;
+        OnUsersMenuEvent += MakeUserNameList;
         userNames = new List<string>();
         CallUsersMenuEvent();
+
+        System.Delegate[] invocationList = OnUsersMenuEvent.GetInvocationList();    // 디버그
+        foreach (System.Delegate handler in invocationList)
+        {
+            Debug.Log(handler.Method.Name); // 메서드 이름 출력
+        }
     }
     private void GetUsersName()
     {
@@ -78,16 +92,13 @@ public class UsersMenu : MonoBehaviour
             float y = List.transform.position.y + (-20f * i);
 
             userNameBox.transform.position = new Vector2(x, y);
-
-
-
         }
     }
 
-
-
-
-
+    // 
+    // 프리팹화 하고 오브젝트풀로 하기
+    // 씬데이터를 만들고 리스트 데이터
+    // 텍스트를 가지고있는 프리팹
 
 
 
