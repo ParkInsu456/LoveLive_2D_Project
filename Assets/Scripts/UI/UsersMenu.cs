@@ -36,7 +36,7 @@ public class UsersMenu : MonoBehaviour
         GameObject[] objs = GameObject.FindObjectsOfType<GameObject>();
         foreach (GameObject obj in objs)
         {
-            if( obj.layer == LayerMask.NameToLayer(layerName) || obj.layer == LayerMask.NameToLayer(layerName2) && obj.transform.parent == null )
+            if( obj.layer == LayerMask.NameToLayer(layerName) || obj.layer == LayerMask.NameToLayer(layerName2)) // && obj.transform.parent == null
             {
                 // 해당 레이어에 속한 객체의 이름을 리스트에 추가   // 현재 오브젝트의 이름을 가져오고있는데 특정속성을 가져오면 됨.
                 userNames.Add(obj.GetComponent<PlayerInfo>().Name);

@@ -19,7 +19,6 @@ public class InGameChangeCharacter : MonoBehaviour
 
     // 게임 플레이 중 캐릭터를 바꾼다.
 
-    // 플레이어에 들어간 프리팹만 바꾼다. => 현재구조상 다 바꾼다는 뜻...
     // 기존 캐릭터 삭제 전 위치정보, 이름정보를 temp에 저장하고 삭제. 이정보를 가지고 새로 생성하기.
     public void EXE()
     {
